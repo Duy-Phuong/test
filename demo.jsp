@@ -373,11 +373,14 @@ $(document).ready(function () {
 							<td><%=l.getCUSTOMER_NAME()%></td>
 							<%
 								String sex = "";
+								if(l.getSEX() != null && "".equalsIgnoreCase(l.getSEX()) == false) {
+								
 									if (Integer.parseInt(l.getSEX()) == 0) {
 										sex = "Male";
 									} else {
 										sex = "Female";
 									}
+							}
 							%>
 							<td><%=sex%></td>
 							<td><%=l.getBIRTHDAY()%></td>
